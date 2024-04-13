@@ -21,3 +21,11 @@ pip install -r requirements.txt
 ```
 python manage.py runserver
 ```
+
+## Документация 
+
+[English](https://docs.djangoproject.com/en/5.0)  
+
+[Русский](https://django.fun/docs/django/5.0)
+
+
