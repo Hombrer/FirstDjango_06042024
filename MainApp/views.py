@@ -4,22 +4,6 @@ from django.core.exceptions import ObjectDoesNotExist
 from MainApp.models import Item
 
 
-author = {
-    "Имя": "Иван",
-    "Отчество": "Петрович",
-    "Фамилия": "Иванов",
-    "телефон": "8-923-600-01-02",
-    "email": "vasya@mail.ru"
-}
-
-# items = [
-#    {"id": 1, "name": "Кроссовки abibas" ,"quantity": 5},
-#    {"id": 2, "name": "Куртка кожаная" ,"quantity": 2},
-#    {"id": 5, "name": "Coca-cola 1 литр" ,"quantity": 12},
-#    {"id": 7, "name": "Картофель фри" ,"quantity": 0},
-#    {"id": 8, "name": "Кепка" ,"quantity": 124}
-# ]
-
 
 def home(request):
     context = {
@@ -30,6 +14,13 @@ def home(request):
 
 
 def about(request):
+    author = {
+    "Имя": "Иван",
+    "Отчество": "Петрович",
+    "Фамилия": "Иванов",
+    "телефон": "8-923-600-01-02",
+    "email": "vasya@mail.ru"
+    }
     result = f"""
     <header>
         / <a href="/"> Home </a> / <a href="/items"> Items </a> / <a href="/about"> About </a>
@@ -56,7 +47,6 @@ def get_item(request, item_id: int):
         }
         return render(request, "item_page.html", context)
     
-
 
 def items_list(request):
     """ Get all items from database """
