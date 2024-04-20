@@ -9,3 +9,5 @@ class Item(models.Model):
     def __str__(self) -> str:
         return f"Item({self.name})"
 
+    def __repr__(self) -> str:
+        return f"Item({self.name}, {self.brand}, {self.count})"
