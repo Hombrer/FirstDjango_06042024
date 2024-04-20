@@ -17,10 +17,20 @@ source venv_name/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Запуск сервера `django`
+4. Применение миграций
+```
+python manage.py migrate
+```
+
+5. Запуск сервера `django`
 ```
 python manage.py runserver
 ```
+## Запуск `ipython` в контексте приложений `django`
+```
+python manage.py shell_plus --ipython
+```
+
 
 ## Документация 
 
