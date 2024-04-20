@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Home page </title>
-</head>
-<body>
-    <header>
-        / <a href="/"> Home </a> / <a href="/items"> Items </a> / <a href="/about"> About </a>
-    </header>
-    
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+    {{ block.super }}
+
     <h1>Приветствую!</h1>
 
     Меня зовут: <i>{{ name }}</i><br>
@@ -17,5 +12,4 @@
 
     Это главная страница сайта<br>
     <i>Сайт пока в разработке...</i>
-</body>
-</html>
+{% endblock  %}
