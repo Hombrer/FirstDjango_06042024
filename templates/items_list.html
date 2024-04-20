@@ -6,6 +6,10 @@
     <title>Items list</title>
 </head>
 <body>
+    <header>
+        / <a href="/"> Home </a> / <a href="/items"> Items </a> / <a href="/about"> About </a>
+    </header>
+    
     <h2>Список товаров</h2>
 
     <ol>
@@ -13,6 +17,6 @@
             <li><a href="/item/{{ item.id }}"> {{ item.name }} </a></li>
         {% endfor %}
     </ol>
-    
+
 </body>
 </html>
