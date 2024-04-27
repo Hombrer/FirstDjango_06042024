@@ -14,7 +14,7 @@
 {% block content %}
     {{ block.super }}
 
-   <h1>{{ item.name }} </h1> 
+    <h1>{{ item.name }} </h1> 
 
     <div>
         Количество: {{ item.count | default:"Товар отсутствует на складе"}}
@@ -25,6 +25,8 @@
     </div>
     
     <br><br>
+
+    <div class="div_color" style='background-color: blue';></div>&nbsp;&nbsp; Пример квадрата<br><br>
     <a href="{% url "items-list" %}"> Назад к списку товаров </a>
 
 {% endblock  %}
