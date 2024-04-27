@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 .item{
     width:150pt;
     height: 100%;
@@ -24,14 +25,14 @@
 .item_name{
     font-size: 1.5em;
     text-align:center;
-    }
+}
 
-    .item a{
+.item a{
     text-decoration: none;
     color: black;
     text-align: justify;
+}
 
-    }
 .items {
     width: 100%;
     display: grid;
@@ -43,4 +44,26 @@
     column-gap: 30px; /* Отступ между колонками */
     row-gap: 40px; /* Отступ между рядами */
     margin: 0 auto;
+}
+
+.green_test {
+
+    color: green;
+    text-align: justify;
+}
+
+.containter {
+    display: flex;
+}
+
+.ul_no_mark {
+    list-style-type: none;
+}
+
+.div_color {
+    border: 1px solid #000;
+    width: 10px;
+    height: 10px;
+    margin-top: 3px;
+    float:left;
 }
