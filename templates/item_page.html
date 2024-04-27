@@ -23,10 +23,20 @@
     <div>
         Описание: {{ item.description }}
     </div>
-    
+    <br>
+    <i>Цвета</i>
+    {% if colors %}
+        <ul class="ul_no_mark">
+            {% for color in colors %}
+                <li><div class="div_color" style='background-color: {{ color.name }};'></div>&nbsp;&nbsp; {{ color.name }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p> Нет цветов </p>
+    {% endif %}
     <br><br>
 
-    <div class="div_color" style='background-color: blue';></div>&nbsp;&nbsp; Пример квадрата<br><br>
+   
     <a href="{% url "items-list" %}"> Назад к списку товаров </a>
 
 {% endblock  %}

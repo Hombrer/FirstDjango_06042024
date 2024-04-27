@@ -39,11 +39,13 @@ def get_item(request, item_id: int):
     """ По указанному id возращаем имя элемента и его кол-во """
     try:
         item = Item.objects.get(id=item_id)
+        colors = item.colors.all() if item.colors.exists() else []
     except ObjectDoesNotExist:
         return HttpResponseNotFound(f'Товар с id={item_id} не найден')
     else:
         context = {
-            "item": item
+            "item": item,
+            "colors": colors
         }
         return render(request, "item_page.html", context)
     
