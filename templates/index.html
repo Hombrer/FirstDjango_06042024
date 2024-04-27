@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block title %} Home {% endblock %}
 
 {% block content %}
     {{ block.super }}
+    <br><br>
+    <img width="50px" src="{% static "django.svg" %}" alt="My image">
 
     <h1>Приветствую!</h1>
 
-    Меня зовут: <i>{{ name }}</i><br>
+    <span style='color: blue'>Меня зовут: <i>{{ name }}.</i></span><br>
     Мой email для связи: <i>{{ email }}</i><br><br>
 
     Это главная страница сайта<br>
